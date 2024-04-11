@@ -1,5 +1,6 @@
-function foo(x?: number|string|null) {
+function foo(x?: number | string | null) {
   if (!x) {
-    x;  // Type is string | number | null | undefined
+    // undefined | null | 0 | "" | false
+    x; // Type is string | number | null | undefined
   }
 }

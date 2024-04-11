@@ -11,10 +11,11 @@ interface ScatterProps {
   // Events
   onClick: (x: number, y: number, index: number) => void;
 }
-function shouldUpdate(
-  oldProps: ScatterProps,
-  newProps: ScatterProps
-) {
+//누라적인 경우가 생길 수 있습니다.
+//2번에서 마찬가지인데?
+//객체에 키가 추가되었을 경우에 누락된다고한다.
+//새로운 프로퍼티가 추가가되면 일일히 추가를 해야하기 때문에 대응하기가 힘들다.
+function shouldUpdate(oldProps: ScatterProps, newProps: ScatterProps) {
   return (
     oldProps.xs !== newProps.xs ||
     oldProps.ys !== newProps.ys ||
